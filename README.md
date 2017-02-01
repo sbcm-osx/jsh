@@ -1,5 +1,15 @@
 #Jsh : the Java Shell
 ###### by Deloche Tristan
+![https://travis-ci.org/Tristan971/jsh](https://travis-ci.org/Tristan971/jsh.svg?branch=master)
+![https://www.codacy.com/app/Tristan971/jsh](https://api.codacy.com/project/badge/Grade/cab48657f0534b0d93b090bc663eab24)
+
+<br/>
+
+#### Contents of this file :
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Contributing](#contributing)
+
 
 ## Description
 Jsh aims to be a zsh-like shell.
