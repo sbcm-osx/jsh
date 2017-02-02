@@ -1,6 +1,8 @@
 language: java
 env:
   global:
+  # Make maven less verbose
+  - MAVEN_OPTS: -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
   #CODACY_API_TOKEN
   - secure: wLy4zmfFUKqdLkQJOqPkUbaBwatF6kKsb4aT/wFsLyrm4rCZ2P6r/O5FXOBCviVyhOdRwJn0lg6xsuM+mD61w3giQVjBgVSTpka1MOYp24kCmm771NewRhvnDKYVJ0P0ugqy2OQupZ9AEA+X8+TDiiz6qGOccJp6zDZ0TlE7BPNFCwp7aZ3Z9xxXvAT30VdsS3tSngeHbxPhO7zy9p14kAlwIa3UGgzrLOk5RNUwI1hXQYBeJLvbITGlRjJVRZxlQjCqVdZnQBBIiAflINYHVG1rWlviNowu4vMaSLfbE6Vs8bzKb0NLVpRFdDN11HSY6FM1Z8T52bIb5gagkx3b25ybUpieWZ/mAWyK+a2sS3gI+i6HelAU9rj1diVSV9s0EEBT+iikPeDQf/dWTwXsE5Wn8LiR56MrgCpbm1FUhq26MXj7NoQjWfrybjU2Ncvya8plzIB5fB2CVpl7HeiJuX/sJG9a+FkDEREp/mdd1tjoCZXr06zUHXPi7AqmoGcRX/M9dIKHDUyG8uvEnqioN/L+BQz4uAnxoul6DgWOrbC/twD5XtXigWjOzo6LqzhJceX79MysrSweFLej17VTQ+KqUDaJ1u9wNhkFO1D95GXR+lMKIjMzev7X+SGhpiu3erxPie5VabThySGx9b/U8Ey83LFx5k0vgLeKrh3gy3Q=
   #CODACY_PROJECT_TOKEN
@@ -19,9 +21,9 @@ jdk:
   - oraclejdk8
 
 script:
-  - mvn clean
-  - mvn test -B
-  - mvn versioneye:update
-  - mvn site
-  - mvn jacoco:report
-  - mvn com.gavinmogan:codacy-maven-plugin:coverage -DcoverageReportFile=target/site/jacoco/jacoco.xml -DprojectToken=$CODACY_PROJECT_TOKEN -DapiToken=$CODACY_API_TOKEN
+  - mvn -B clean
+  - mvn -B test
+  - mvn -B versioneye:update
+  - mvn -B site
+  - mvn -B jacoco:report
+  - mvn -B com.gavinmogan:codacy-maven-plugin:coverage -DcoverageReportFile=target/site/jacoco/jacoco.xml -DprojectToken=$CODACY_PROJECT_TOKEN -DapiToken=$CODACY_API_TOKEN
