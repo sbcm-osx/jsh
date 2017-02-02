@@ -44,7 +44,7 @@ public class UnixSystemExecutor extends AbstractSystemExecutor {
             final Process process = processBuilder.start();
             return Optional.ofNullable(process.getOutputStream());
         } catch (final IOException e) {
-            log.error("The command you entered was invalid : "+e.getMessage());
+            log.error("The command you entered was invalid : " + e.getMessage());
         }
 
         return Optional.empty();

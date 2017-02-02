@@ -15,28 +15,37 @@ final class SessionTest {
     void getSession() {
         assertNotNull(
                 Session.getSession(),
-                "The session was null when it should never ever be null.")
+                "The session was null when it should never ever be null."
+        )
         ;
     }
 
     @Test
     public void getCurrentDirectory() {
-        if (System.getProperty("user.name").equals("travis")) {
+        if (System.getProperty("user.name")
+                .equals("travis")) {
             // travis does some weird stuff during CI so we must not expect much from this test
             return;
         }
         assertEquals(
                 System.getProperty("user.home"),
-                Session.getSession().getCurrentDirectory().toAbsolutePath().toString()
+                Session.getSession()
+                        .getCurrentDirectory()
+                        .toAbsolutePath()
+                        .toString()
         );
     }
 
     @Test
     public void setCurrentDirectory() {
-        Session.getSession().setCurrentDirectory(Paths.get("/"));
+        Session.getSession()
+                .setCurrentDirectory(Paths.get("/"));
         assertEquals(
                 "/",
-                Session.getSession().getCurrentDirectory().toAbsolutePath().toString()
+                Session.getSession()
+                        .getCurrentDirectory()
+                        .toAbsolutePath()
+                        .toString()
         );
     }
 

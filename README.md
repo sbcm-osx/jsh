@@ -1,10 +1,8 @@
 #Jsh : the Java Shell
 ###### by Deloche Tristan
 [![Travis-CI Badge](https://travis-ci.org/Tristan971/jsh.svg?branch=master)](https://travis-ci.org/Tristan971/jsh)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cab48657f0534b0d93b090bc663eab24)](https://www.codacy.com/app/Tristan971/jsh)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/cab48657f0534b0d93b090bc663eab24)](https://www.codacy.com/app/Tristan971/jsh)
-
 [![Dependency Status](https://www.versioneye.com/user/projects/5893129cb890130016a5acb5/badge.svg)](https://www.versioneye.com/user/projects/5893129cb890130016a5acb5)
 
 <br/>

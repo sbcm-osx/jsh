@@ -12,7 +12,9 @@ final class AbstractSystemExecutorTest {
     public void execute() {
         //noinspection AnonymousInnerClassMayBeStatic
         final SystemExecutor executor = new AbstractSystemExecutor() {};
-        final Command command = Command.builder().function("ls").build();
+        final Command command = Command.builder()
+                .function("ls")
+                .build();
         Assertions.assertThrows(UnsupportedOperationException.class, () -> executor.execute(command));
     }
 }

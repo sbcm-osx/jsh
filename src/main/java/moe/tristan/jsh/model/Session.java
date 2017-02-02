@@ -18,6 +18,8 @@ public final class Session {
     private static final Session SESSION = defaultSession();
 
     private Path currentDirectory;
+    private String currentTitle;
+    private Command lastCommand;
 
     @Contract(pure = true)
     public static Session getSession() {
@@ -27,6 +29,7 @@ public final class Session {
     private static Session defaultSession() {
         return Session.builder()
                 .currentDirectory(Paths.get(System.getProperty("user.home")))
+                .currentTitle("Jsh")
                 .build();
     }
 }
