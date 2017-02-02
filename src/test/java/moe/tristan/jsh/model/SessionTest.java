@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * Created by tristan on 2/2/17.
  */
-class SessionTest {
+final class SessionTest {
     @Test
     void getSession() {
         assertNotNull(
@@ -20,7 +20,7 @@ class SessionTest {
     }
 
     @Test
-    void getCurrentDirectory() {
+    public void getCurrentDirectory() {
         assertEquals(
                 System.getProperty("user.home"),
                 Session.getSession().getCurrentDirectory().toAbsolutePath().toString()
@@ -28,7 +28,7 @@ class SessionTest {
     }
 
     @Test
-    void setCurrentDirectory() {
+    public void setCurrentDirectory() {
         Session.getSession().setCurrentDirectory(Paths.get("/"));
         assertEquals(
                 "/",

@@ -14,6 +14,6 @@ import java.util.List;
 @Data
 @Slf4j
 public final class Command {
-    final String function;
-    final List<String> arguments;
+    private final String function;
+    private final List<String> arguments;
 }
