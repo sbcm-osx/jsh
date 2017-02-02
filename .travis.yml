@@ -15,6 +15,7 @@ sudo: false
 addons:
   apt:
     packages:
+      - maven
       - oracle-java8-installer
 
 jdk:
